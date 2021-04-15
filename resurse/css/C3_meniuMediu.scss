@@ -1,0 +1,142 @@
+$culoare-1: #cd853f;
+$culoare-2:#FFB469;
+$culoare-3:#804D1B;
+$culoare-4: #0E6580;
+$culoare-5: #3FABCC;
+
+body {
+	--inaltime-meniu: 3rem;
+}
+nav {
+	ul.meniu {
+		ul {
+			display: none;
+			position: absolute;
+			width: 100%;
+		}
+		>li {
+			float: left;
+			width: 150px;
+			position: relative;
+			&:hover {
+				>ul {
+					display: block;
+					animation-name: aparitie_meniu;
+					animation-iteration-count: 1;
+					animation-duration: 0.7s;
+					animation-fill-mode: forwards;
+					animation-timing-function: linear;
+				}
+			}
+		}
+		li {
+			text-align: center;
+			list-style-type: none;
+			background: var(--culoare-1);
+			cursor: pointer;
+			a {
+				text-decoration: none;
+				color: black;
+				display: block;
+				font-weight: bold;
+				height: var(--inaltime-meniu);
+				line-height: var(--inaltime-meniu);
+				outline: 1px solid black;
+			}
+			div {
+				text-decoration: none;
+				color: black;
+				display: block;
+				font-weight: bold;
+				height: var(--inaltime-meniu);
+				line-height: var(--inaltime-meniu);
+				outline: 1px solid black;
+			}
+		}
+	}
+	left: 0;
+	height: var(--inaltime-meniu);
+	width: 100%;
+	top: 0;
+	padding: 0;
+	background: var(--culoare-1);
+	z-index: 10;
+	position: fixed;
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+	li {
+		padding: 0;
+		margin: 0;
+	}
+}
+ul.meniu {
+
+	#bara_meniu{
+		position: relative;
+
+			&:hover{
+				&::after{
+					width: 100%;
+				}
+			}
+
+			&::after{
+				content: " ";
+				background: linear-gradient(to left, var(--culoare-3), var(--culoare-1));
+				display: block;
+				position: absolute;
+				bottom:0;
+				right:0;
+				height: 7px;
+				width: 0;
+				transition: width 0.5s linear;
+			}
+	}
+}
+
+ul.submeniu{
+	> li{
+		&:hover {
+			 		background: var(--culoare-2);
+					a{
+						color: var(--culoare-4);
+					}
+			 	}
+	
+		transition: all 700ms linear;
+		
+	}
+}
+
+#hamburger {
+	display: none;
+	height: var(--inaltime-meniu);
+	img {
+		height: 100%;
+		width: auto;
+	}
+}
+#ch-menu {
+	display: none;
+}
+
+@keyframes aparitie_meniu{
+    0%{
+    transform: scaleY(0);
+    }
+    100%{
+    transform: scaleY(1);
+    }
+}
+
+#acasa{
+    span{
+        display: none;
+    }
+}
+
+
+
+// de schimbat la submeniu culoarea textului !!!!!!!!!!!!!!!!!!!

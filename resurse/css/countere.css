@@ -1,0 +1,36 @@
+body{
+    counter-reset: c_evenimente c_anunțuri;
+    font-size: 16px;
+}
+
+#calendar > p::before{
+    counter-increment: c_evenimente;
+    content: counter(c_evenimente);
+    margin-right: 10px;
+    margin-bottom:10px;
+    width:30px;
+    height:30px;
+    display:inline-flex;
+    align-items:center;
+    justify-content: center;
+    font-size:16px;
+    background-color: var(--culoare-5);
+    border-radius:50%;
+    color:#fff;
+}
+
+#anunțuri > p::before{
+    counter-increment: c_anunțuri;
+    content: counter(c_anunțuri);
+    margin-right: 10px;
+    margin-bottom:10px;
+    width:30px;
+    height:30px;
+    display:inline-flex;
+    align-items:center;
+    justify-content: center;
+    font-size:16px;
+    background-color: var(--culoare-4);
+    border-radius:50%;
+    color:#fff;
+}

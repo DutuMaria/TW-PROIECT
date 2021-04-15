@@ -7,135 +7,299 @@
         <meta name  = "author" content = "Duțu Maria Alexandra">
         <meta name = "viewpoint" content = "width=device-width, initial-scale=1.0">
         <title>Clubul Sportiv Shuttle Life</title>
+        <link rel="stylesheet" type="text/css" href="./resurse/css/C1_C2_(schema_crom+layout)Mare.css" />
+        <link rel="stylesheet" href="./resurse/css/C1_C2_(schema_crom+layout)Mediu.css" type="text/css" media="screen and (max-width:1200px)"/>
+        <link rel="stylesheet" href="./resurse/css/C1_C2_(schema_crom+layout)Mic.css" type="text/css" media="screen and (max-width:700px)"/>
+        <link rel="stylesheet" href="./resurse/css/meniuMediu.css" type="text/css" media="screen and (max-width:1200px)"/>
+        <link rel="stylesheet" href="./resurse/css/meniuMic.css" type="text/css" media="screen and (max-width:700px)"/>
+
+
         <link rel="apple-touch-icon" sizes="76x76" href="./favicon_package_v0/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="./favicon_package_v0/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="./favicon_package_v0/favicon-16x16.png">
         <link rel="manifest" href="./favicon_package_v0/site.webmanifest">
         <link rel="mask-icon" href="./favicon_package_v0/safari-pinned-tab.svg" color="#9933ff">
-        <meta name="msapplication-TileColor" content="#2b5797">
+        <meta name="msapplication-TileColor" content="#2b5797"> -->
         <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
+        <link href='https://fonts.googleapis.com/css?family=Oregano' rel='stylesheet'>
+
+
     </head>
     <body>
     <header>
-        <h1>Clubul sportiv Shuttle Life</h1>
+        <h1>Clubul sportiv <span>Shuttle Life</span></h1>
         <nav>
-            <ul>
-                <li>Acasă
-                    <ul>
+
+            <label id="hamburger" for="ch-menu">
+                <img src="resurse/imagini/Hamburger_icon_alb.png" alt="menu">
+            </label>
+            <input id="ch-menu" type="checkbox">
+
+            <ul class = "meniu">
+                <li><div id = "acasa"><span>Acasă</span></div>
+                    <ul class = "submeniu">
                         <li><a href = "#welcome">Bine ați venit!</a></li>
+                        <li><a href = "#orar">Orar antrenamente</a></li>
+                        <li><a href = "#calendar">Evenimente</a></li>
+                        <li><a href = "#anunțuri">Anunțuri</a></li>
+                        <li><a href = "#utilizatori">Utilizatori online</a></li>
+                        <li><a href = "#statistici">Statistici</a></li>
+                        <li><a href = "#site">Server și site</a></li>
                         <li><a href = "#facilități">Facilități</a></li>
-                        <li><a href = "#concursuri">Concursuri organizate de Shuttle Life</a>
-                            <ul>
-                                <li><a href ="#naționale">Concursuri naționale</a></li>
-                                <li><a href ="#amatori">Concursuri amatori</a></li>
-                            </ul>
-                        </li>
+                        <li><a href = "#concursuri">Concursuri</a></li>
                         <li><a href = "#index_intrebari">Întrebări frecvente</a></li>
                     </ul>
                 </li>
-                <li>Despre noi
-                    <ul>
-                        <li>Statistici</li>
-                        <li>Antrenori</li>
-                        <li>Jucători</li>
-                        <li>Galerie</li>
+                <li><a href = "#">Despre noi</a>
+                    <ul class = "submeniu">
+                        <li><a href = "#">Jucători</a></li> 
+                        <li><a href = "#">Galerie</a></li>
                     </ul>
                 </li>
-                <li>Terenuri
-                    <ul>
-                        <li>Program</li>
-                        <li>Rezervări</li>
-                        <li>Tarife</li>
+                <li><a href = "#">Antrenori</a>
+                    <ul class = "submeniu">
+                        <li><a href = "#">Tarife</a></li>
+                        <li><a href = "#">Angajează</a></li>
                     </ul>
                 </li>
-                <li>Contul meu</li>
+                <li><a href="#" id = "bara_meniu">Înregistrare</a></li>
+                <!-- daca mai sunt pagini fara submeniu trebuie pus id ul bara_meniu!!!!!! -->
             </ul>
         </nav>
     </header>
     <main>
-        <p><q><i lang = "en">The five S’s of sports training are: stamina, speed, strength, skill, and spirit; but the greatest of these is spirit.</i>T</q>-Ken Doherty</p>
-        <section id = "welcome">
-            <h2>Bine ați venit!</h2>
-            <p>Ce înseamnă <b>badminton</b>?</p>
-            <blockquote cite="https://ro.wikipedia.org/wiki/Badminton">
-                Badmintonul este un sport în care doi jucători sau două perechi de jucători joacă plasându-se fiecare de câte o parte a unui fileu care împarte terenul dreptunghiular în două jumătăți egale. Cei doi jucători sau două perechi câștigă puncte lovind un fluturaș (minge) cu racheta astfel încât acesta să treacă peste fileu și să aterizeze în terenul advers.
-            </blockquote>
-            <a href="https://www.youtube.com/embed/4mqp8floYGQ" target="ifr-video">Expectations vs Reality</a>
-            <a href="https://www.youtube.com/embed/IbsU6uR_GnA" target="ifr-video">10 Badminton shots</a><br>
-            <iframe name = "ifr-video" width="320" height="240" src="https://www.youtube.com/embed/4mqp8floYGQ"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p><b>Clubul Sportiv</b><b> Shuttle Life</b> este cel mai nou club privat de <b>badminton</b> din București. Suntem o comunitate alcătuită din oameni energici și pasionați de mișcare. Oamenii vin și pleacă de la sală cu zâmbetul pe buze!</p>
-            <p>Vă așteptăm în echipa noastră!</p>
-        </section>
-        <section id = "facilități">
-            <h2>Facilități</h2>
-            <ul>
-                <li>7 terenuri de <b>badminton</b></li>
-                <li>o sala de fitness</li>
-                <li>aparate de ultima generație marca Technogym</li>
-                <li>vestiare prevazute cu sauna</li>
-                <li>locuri de parcare permanent supravegheate</li>
-                <li>restaurant</li>
-            </ul>
-        </section>
-        <section id = "concursuri">
-            <h2>Concursuri de badminton organizate de Shuttle Life</h2>
-            <p>Se desfășoară mai multe tipuri de <b>concursuri</b> în fiecare an.</p>
-            <p>Următorul concurs: <abbr title="To Be Announced"><i lang = "en">TBA</i></abbr></p>
-            <p>Mai multe <b>concursuri</b> pe: <a href="https://www.tournamentsoftware.com" target="_blank">TournamentSoftware.com</a></p>
-            <p>Toate tipurile de <b>concursuri</b> au următoarele probe:</p>
-            <ol>
-                <li>MS</li>
-                <li>WS</li>
-                <li>MD</li>
-                <li>WD</li>
-                <li>XD</li>
-            </ol>
-            <section id = "naționale">
-                <h3>Concursuri naționale</h3>
-                <details><summary>Aceste <b>concursuri</b> sunt pe diferite categorii de vârstă.</summary>
-                <ol>
-                    <li>U9</li>
-                    <li>U11</li>
-                    <li>U13</li>
-                    <li>U15</li>
-                    <li>U17</li>
-                    <li>U19</li>
-                    <li>U23</li>
-                    <li>Elite</li>
-                </ol>
-                </details>
-            </section>
-            <section id = "amatori">
-                <h3>Concursuri pentru amatori</h3>
-                <details><summary>Aceste <b>concursuri</b> sunt pe diferite categorii în funcție de numărul de puncte acumulate.</summary>
-                <dl>
-                    <dt>A</dt>
-                    <dd>Jucatorii al caror punctaj este mai mare sau egal cu 541 au dreptul sa joace doar la categoria A</dd>
-                    <dt>B</dt>
-                    <dd>Jucatorii al caror punctaj este mai mare sau egal cu 271 au dreptul sa joace doar la categoriile A și B</dd>
-                    <dt>C</dt>
-                    <dd>Jucatorii al caror punctaj este sub 271 au dreptul sa joace la toate categoriile </dd>
-                </dl>
-                <aside>
-                    <p>La concursurile pentru amatori nu se pot înscrie actuali sau foști jucători participanți în cadrul campionatului național. Înscrierea jucătorilor în diferitele categorii se va face ținând cont de valoarea jucătorilor și de rezultatele obținute la alte concursuri.</p>
-                </aside>
-            </details>
-            </section>
-        </section>
-        <section id = "index_intrebari">
-            <h2>Întrebări frecvente</h2>
-            <details><summary>Aveți personal calificat pentru inițierea în sport?</summary>
-                <p>DA!</p>
-            </details>
-            <details><summary>Doar jucătorii înscriși la club pot participa la <b>concursuri?</b></summary>
-                <p>La concursurile oficiale pot participa doar jucătorii înscriși la un club, dar există și concursuri pentru amatori, destinat celor care nu sunt înscriși la un club</p>
-            </details>
-            <details><summary>Abonamentul se aplică doar celori înscriși la club?</summary>
-                <p>DA!</p>
-            </details>
-        </section>
+        <div id="grid">
+            <div id="welcome">
+                <p><q id= "citat"><i lang = "en">The five S’s of sports training are: stamina, speed, strength, skill, and spirit; but the greatest of these is spirit.</i></q>-Ken Doherty</p>
+                <section>
+                    <h2>Bine ați venit!</h2>
+                    <p>Ce înseamnă <b>badminton</b>?</p>
+                    <blockquote cite="https://ro.wikipedia.org/wiki/Badminton">
+                        Badmintonul este un sport în care doi jucători sau două perechi de jucători joacă plasându-se fiecare de câte o parte a unui fileu care împarte terenul dreptunghiular în două jumătăți egale. Cei doi jucători sau două perechi câștigă puncte lovind un fluturaș (minge) cu racheta astfel încât acesta să treacă peste fileu și să aterizeze în terenul advers.
+                    </blockquote>
+                    <p><b>Clubul Sportiv</b><b> Shuttle Life</b> este cel mai nou club privat de <b>badminton</b> din București. Suntem o comunitate alcătuită din oameni energici și pasionați de mișcare!</p>
+                    <p>Vă așteptăm în echipa noastră!</p>
+                </section>
+            </div>
+            <div id="video">
+                <section>
+                    <h2>Videoclipuri</h2>
+                    <div class= "flexbox">
+                        <div class = "butoane">
+                            <div class= "item"><a href="https://www.youtube.com/embed/4mqp8floYGQ" target="ifr-video">Expectations vs Reality</a></div>
+                            <div class= "item"><a href="https://www.youtube.com/embed/IbsU6uR_GnA" target="ifr-video">10 Badminton shots</a></div>
+                        </div>
+                    </div>
+                    <iframe id = "ifr-video" name = "ifr-video" width="320" height="240" src="https://www.youtube.com/embed/4mqp8floYGQ"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </section>
+            </div>
+            <div id="facilități"> 
+                <section>
+                    <h2>Facilități</h2>
+                    <ul>
+                        <li>7 terenuri de <b>badminton</b></li>
+                        <li>o sala de fitness</li>
+                        <li>aparate de ultima generație marca Technogym</li>
+                        <li>vestiare prevăzute cu sauna</li>
+                        <li>locuri de parcare permanent supravegheate</li>
+                        <li>restaurant</li>
+                    </ul>
+                </section>
+            </div>
+            <!-- <div id="concursuri">
+                <section>
+                    <h2>Concursuri de badminton organizate de Shuttle Life</h2>
+                    <p>Se desfășoară mai multe tipuri de <b>concursuri</b> în fiecare an.</p>
+                    <p>Mai multe <b>concursuri</b> pe: <a href="https://www.tournamentsoftware.com" target="_blank">TournamentSoftware.com</a></p>
+                    <p>Toate tipurile de <b>concursuri</b> au următoarele probe:</p>
+                    <ol>
+                        <li>MS</li>
+                        <li>WS</li>
+                        <li>MD</li>
+                        <li>WD</li>
+                        <li>XD</li>
+                    </ol>
+                </section>
+            </div>
+                <div id = "nationale">
+                    <section>
+                        <h3>Concursuri naționale</h3>
+                        <details><summary>Aceste <b>concursuri</b> sunt pe diferite categorii de vârstă.</summary>
+                        <ol>
+                            <li>U9</li>
+                            <li>U11</li>
+                            <li>U13</li>
+                            <li>U15</li>
+                            <li>U17</li>
+                            <li>U19</li>
+                            <li>U23</li>
+                            <li>Elite</li>
+                        </ol>
+                        </details>
+                    </section>
+                </div>
+                <div id = "amatori">
+                    <section>
+                        <h3>Concursuri pentru amatori</h3>
+                        <details><summary>Aceste <b>concursuri</b> sunt pe diferite categorii în funcție de numărul de puncte acumulate.</summary>
+                        <dl>
+                            <dt>A</dt>
+                            <dd>Jucatorii al caror punctaj este mai mare sau egal cu 541 au dreptul sa joace doar la categoria A</dd>
+                            <dt>B</dt>
+                            <dd>Jucatorii al caror punctaj este mai mare sau egal cu 271 au dreptul sa joace doar la categoriile A și B</dd>
+                            <dt>C</dt>
+                            <dd>Jucatorii al caror punctaj este sub 271 au dreptul sa joace la toate categoriile </dd>
+                        </dl>
+                        <aside>
+                            <p>La concursurile pentru amatori nu se pot înscrie actuali sau foști jucători participanți în cadrul campionatului național. Înscrierea jucătorilor în diferitele categorii se va face ținând cont de valoarea jucătorilor și de rezultatele obținute la alte concursuri.</p>
+                        </aside>
+                    </details>
+                    </section>
+                </div> -->
+            <div id="index_intrebari">
+                <section>
+                    <h2>Întrebări frecvente</h2>
+                    <details><summary>Aveți personal calificat pentru inițierea în sport?</summary>
+                        <p>DA!</p>
+                    </details>
+                    <details><summary>Doar jucătorii înscriși la club pot participa la <b>concursuri?</b></summary>
+                        <p>La concursurile oficiale pot participa doar jucătorii înscriși la un club, dar există și concursuri pentru amatori, destinat celor care nu sunt înscriși la un club</p>
+                    </details>
+                    <details><summary>Abonamentul se aplică doar celori înscriși la club?</summary>
+                        <p>DA!</p>
+                    </details>
+                </section>
+            </div>
+            <div id="orar">
+                <h2><i class="fas fa-calendar"></i>  Orar antrenamente</h2>
+                <div id = tabel_container>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Luni</th>
+                            <th>Marți</th>
+                            <th>Miercuri</th>
+                            <th>Joi</th>
+                            <th>Vineri</th>
+                            <th>Sâmbătă</th>
+                            <th>Duminică</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class = "rand">
+                            <td>09:00-11:00</td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                        </tr>
+                        <tr class = "rand">
+                            <td>11:00-13:00</td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class = "rand">
+                            <td>13:00-15:00</td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class = "rand">
+                            <td>15:00-17:00</td>
+                            <td></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class = "rand">
+                            <td>17:00-19:00</td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class = "rand">
+                            <td>19:00-21:00</td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class = "rand">
+                            <td>Ore/zi</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+                </div>
+            </div>
+            <div id="calendar">
+                <h2>Evenimente</h2>
+                <p>Concurs U15 București: 16-18 Aprilie</p>
+                <p>Concurs U19 București: 23-25 Aprilie</p>
+                <p>Concurs U13 București: 14-16 Mai</p>
+                <p>Concurs U13 București: 28-30 Mai</p>
+                <p>Cantonament (locația: <abbr title="To Be Announced"><i lang = "en">TBA</i></abbr>) 21-27 Iunie </p>
+
+            </div>
+            <div id="anunțuri">
+                <h2> <i class="fas fa-asterisk fa-spin"></i> Anunțuri</h2>
+                <p>Antrenamentele de pe 26 Aprilie sunt anulate!</p>
+                <p>Antrenamentele de la 13:00-15:00 din această săptamână sunt destinate grupei de performanță!</p>
+            </div>
+            <div id="utilizatori">
+                <h2>Utilizatori online</h2>
+                <p>Proin massa enim, volutpat eget diam in, pretium consequat eros. Sed in commodo metus, id malesuada massa. In enim neque, luctus non porta ac, bibendum non nisi. Phasellus interdum volutpat eros, at vestibulum augue facilisis sit amet. Sed in justo quis enim facilisis sollicitudin non at eros. Integer lobortis placerat magna. Nam non tortor euismod lacus tempor iaculis id eu lacus.</p>
+            </div>
+            <div id="statistici">
+                <h2>Utilizatori și statistici</h2>
+                <p>Aliquam consequat urna nisi, et bibendum arcu interdum in. Suspendisse consequat gravida metus non ultrices. Sed quis imperdiet tortor. Maecenas a tortor et nisi dictum suscipit id ut arcu. Sed mattis elit vitae dolor faucibus suscipit. Phasellus feugiat elit consectetur, efficitur magna a, fermentum purus. Nullam in ipsum nibh. Donec rutrum arcu non mauris tristique, vel fermentum magna faucibus.</p>
+                <hr>
+                <p> :)) </p>
+            </div>
+            <div id="site">
+                <h2>Site și server</h2>
+                <p>Integer augue metus, luctus eu posuere quis, semper vel urna. Proin eget hendrerit nisi. In hac habitasse platea dictumst. Maecenas nec ultricies lectus. Cras tristique sit amet urna nec tristique. Donec sed congue ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus ac odio eu diam euismod semper eget ut justo. Etiam vitae eros tempus, eleifend tortor pulvinar, aliquet magna. Nam vitae purus ut risus consectetur fringilla nec non neque. Maecenas nec mi lobortis, ullamcorper nisl vel, maximus urna. Proin lorem nunc, accumsan non molestie nec, tempus at tortor. Praesent sit amet elementum ligula. Aliquam facilisis eros at quam tempor, ut varius urna mattis. Maecenas interdum sem at augue commodo, in fermentum velit placerat.</p>
+            </div>
+        </div>
     </main>
+
+    <div id = "banner">
+        <p><i class="fas fa-exclamation-triangle"></i> Acesta este un proiect pentru facultate <i class="fas fa-exclamation-triangle"></i></p>
+    </div>
+
     <footer>
         <br>
         <h4>Contact</h4>
@@ -146,7 +310,7 @@
         </address>
         <small>&copy; Copyright<time datetime="2021-03-04"> Martie 2021</time> Duțu Maria Alexandra</small><br>
         <br>
-        <a href = "#">început</a>
+        <div id = "sus" title="sus"><a href = "#" ><div id = "sageata">&#8679</div></a></div>
     </footer>
     </body>
 </html>

@@ -1,0 +1,43 @@
+#sus{
+    --bord: 1px solid var(--culoare-5);
+    border: var(--bord);
+    border-top-left-radius:  50%;
+    border-top-right-radius:  50%;
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    bottom: 10px; 
+    right: 10px;
+    background-color: var(--culoare-5);
+    box-shadow: 1px 1px 10px var(--culoare-4) inset;
+    opacity: 0.7;
+    text-align: center;
+}
+
+#sageata{
+    display: inline-block;
+    position: relative;
+    width: auto;
+    height: 20px;
+    top: 10px;
+    opacity: 0.5;
+    box-sizing: border-box;
+    transition: linear 1s all;
+    color: black;
+}
+
+#sus:hover #sageata{
+    width: auto;
+    /* font-size-adjust: 5px; */
+    transform: scale(2);
+    opacity: 1;
+    transition: linear 1s;
+}
+
+#sus:hover{
+    box-shadow: 2px 2px 20px var(--culoare-4) inset;
+    opacity: 1;
+    
+}
+
+

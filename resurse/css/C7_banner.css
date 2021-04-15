@@ -1,0 +1,39 @@
+#banner{
+    background-color: var( --culoare-5);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 99.3vw;
+    height: auto;
+    border: 5px solid var(--culoare-4);
+    border-radius: 5px;
+    transform: translateY(100%);
+    animation: sus_jos linear 1 forwards 1s;
+    animation-duration: 6s;
+}
+
+#banner p{
+    text-align: center;
+}
+
+@keyframes sus_jos{
+    0%{
+        transform: translateY(0);
+    }
+    25%{
+        transform: translateY(-20px);
+        color: white;
+    }
+    50%{
+        transform: translateY(0);
+        color: black;
+    }
+    75%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(100px);
+    }
+
+
+}

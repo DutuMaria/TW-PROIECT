@@ -1,0 +1,56 @@
+html{
+    font-size:14px;
+}
+
+#banner{
+    display: none;
+}
+
+#grid{
+    display: block;
+}
+
+body{
+
+    --culoare-1: #cd853f;
+	--culoare-2:#FFB469;
+	--culoare-3:#804D1B;
+    --culoare-4: #0E6580;
+    --culoare-5: #3FABCC;
+
+    margin-top:0;
+    margin-bottom:0;
+    --body-padding:3rem;
+
+    --padding-intern:4%;
+
+    background-image: url("../imagini/badminton.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-left:var(--body-padding);
+    padding-right:var(--body-padding);
+    padding-top:0;
+    padding-bottom:0;
+    min-width:330px;
+
+
+}
+
+h1{
+    margin-top: 80px;
+    font-size: 3rem; 
+    text-shadow:0px 0px 1px black,0px 0px 2px black, 0px 0px 4px white,0px 0px 4px white,0px 0px 4px white;
+}
+
+main{
+    --main-border:1px solid black;
+    
+    border:var(--main-border);
+    padding:var(--body-padding);
+    background:rgba(255,255,255,0.6);
+}
+
+h1>span{
+	font-family: 'Oregano', cursive;
+}

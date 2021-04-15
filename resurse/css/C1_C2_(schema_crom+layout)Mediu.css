@@ -1,0 +1,130 @@
+html{
+    font-size:15px;
+}
+
+#banner{
+    display: none;
+}
+
+body{
+
+    --culoare-1: #cd853f;
+	--culoare-2:#FFB469;
+	--culoare-3:#804D1B;
+    --culoare-4: #0E6580;
+    --culoare-5: #3FABCC;
+
+    margin-top:0;
+    margin-bottom:0;
+    --body-padding:3rem;
+
+    --padding-intern:4%;
+
+    background-image: url("../imagini/badminton.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-left:var(--body-padding);
+    padding-right:var(--body-padding);
+    padding-top:0;
+    padding-bottom:0;
+    min-width:330px;
+
+
+}
+
+h1{
+    margin-top: 80px;
+    font-size: 3rem; 
+    text-shadow:0px 0px 1px black,0px 0px 2px black, 0px 0px 4px white,0px 0px 4px white,0px 0px 4px white;
+}
+
+main{
+    --main-border:1px solid black;
+    
+    border:var(--main-border);
+    padding:var(--body-padding);
+    background:rgba(255,255,255,0.6);
+}
+
+h1>span{
+	font-family: 'Oregano', cursive;
+}
+
+#grid{
+    display:grid;
+    grid-template-areas:    "welcome                        welcome" 
+                            "orar                           orar"
+                            "orar                           orar"    
+                        "calendar-evenimente                anunțuri"
+                         "utilizatori-online            date-site-server"
+                        "date-utilizatori-statistici   date-utilizatori-statistici"
+                             " video                        video"
+                            "facilități                     intrebari";
+                             /* "concursuri                  concursuri           concursuri-nationale            concursuri-amatori" */
+                             /* "intrebari                   intrebari                  intrebari                     intrebari"; */
+                         
+    padding: 0%;
+    grid-gap:2rem;
+}
+
+#grid>div{
+
+    outline:1px solid grey;
+    
+    padding:1rem;
+    
+    overflow: scroll;
+    
+    }
+
+#welcome{
+    grid-area: welcome;
+}
+
+#orar{
+    grid-area: orar;
+}
+
+#calendar{
+    grid-area: calendar-evenimente;
+}
+
+#anunțuri{
+    grid-area: anunțuri;
+}
+
+#utilizatori{
+    grid-area: utilizatori-online;
+}
+
+#statistici{
+    grid-area: date-utilizatori-statistici;
+}
+
+#site{
+    grid-area: date-site-server;
+}
+
+#video{
+    grid-area: video
+}
+
+/* #concursuri{
+    grid-area: concursuri
+}
+
+#nationale{
+    grid-area: concursuri-nationale
+}
+#amatori{
+    grid-area: concursuri-amatori
+} */
+
+#facilități{
+    grid-area: facilități;
+}
+
+#index_intrebari{
+    grid-area: intrebari;
+}

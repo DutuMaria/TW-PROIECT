@@ -1,0 +1,28 @@
+hr{
+    border: 1px solid var(--culoare-5);
+    background-color: var(--culoare-5);
+    height: 0.5px;
+    overflow: visible;
+    position: relative;
+    width: 90%;
+}
+
+hr::before{
+    content: "▶";
+    font-size: large;
+    color: var(--culoare-5);
+    float: left;
+    position: relative;
+    top: -9.5px;
+    left: -12px;
+}
+
+hr::after{
+    content: "◀";
+    font-size: large;
+    color: var(--culoare-5);
+    float: right;
+    position: relative;
+    top: -13px;
+    right: -12px;
+}
