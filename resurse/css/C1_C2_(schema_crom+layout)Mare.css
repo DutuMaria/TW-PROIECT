@@ -140,7 +140,16 @@ h1>span{
     content: "\f015";
     color: var(--culoare-3);
     
-    }
+}
+
+q{
+    font-family: 'Oregano', cursive;
+    font-size: large;
+}
+
+#citat{
+    text-align: center;
+}
 
 
 
