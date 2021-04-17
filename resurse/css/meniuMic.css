@@ -10,11 +10,59 @@ ul.meniu {
 
 #ch-menu:checked + ul.meniu {
   display: block;
+  transform-origin: 0 0;
   animation-name: aparitie_meniu_mic;
   animation-iteration-count: 1;
   animation-duration: 0.7s;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
+}
+
+nav .submeniu li {
+  transition: all 700ms linear;
+}
+nav .submeniu li:hover {
+  background: var(--culoare-2);
+}
+nav .submeniu li:hover a {
+  color: var(--culoare-4);
+}
+nav ul.meniu #bara_meniu::after {
+  display: none;
+}
+nav ul.meniu ul {
+  display: none;
+  position: absolute;
+  width: 100%;
+}
+nav ul.meniu > li {
+  float: left;
+  width: 150px;
+  position: relative;
+}
+nav ul.meniu > li:hover .submeniu {
+  display: block;
+  border: 1px solid black;
+  transform-origin: 50% 0%;
+  animation-name: meniu_drop;
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+ul.meniu > #meniu1 {
+  color: black;
+  transition: all 700ms linear;
+}
+ul.meniu > #meniu1:hover {
+  background: var(--culoare-2);
+}
+ul.meniu > #meniu1:hover span {
+  color: var(--culoare-4);
+}
+ul.meniu > #meniu1:hover #acasa::before {
+  color: var(--culoare-4);
 }
 
 nav ul.meniu li {
@@ -29,13 +77,20 @@ nav ul.meniu > li ul {
 
 @keyframes aparitie_meniu_mic {
   0% {
-    transform-origin: 0 0;
     transform: rotate(-90deg);
     opacity: 0;
   }
   100% {
     transform: rotate(0deg);
     opacity: 1;
+  }
+}
+@keyframes meniu_drop {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
   }
 }
 

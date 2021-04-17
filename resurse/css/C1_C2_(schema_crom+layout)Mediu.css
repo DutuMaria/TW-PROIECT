@@ -1,6 +1,3 @@
-html{
-    font-size:15px;
-}
 
 #banner{
     display: none;
@@ -8,11 +5,14 @@ html{
 
 body{
 
+
     --culoare-1: #cd853f;
 	--culoare-2:#FFB469;
 	--culoare-3:#804D1B;
     --culoare-4: #0E6580;
     --culoare-5: #3FABCC;
+
+    font-size:14px;
 
     margin-top:0;
     margin-bottom:0;

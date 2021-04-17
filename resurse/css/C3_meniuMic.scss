@@ -16,12 +16,71 @@ ul.meniu{
 
 #ch-menu:checked+ul.meniu{
     display: block;
+    transform-origin: 0 0;
     animation-name: aparitie_meniu_mic;
     animation-iteration-count: 1;
     animation-duration: 0.7s;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
+}
+
+nav{
+    .submeniu{
+        li{
+            &:hover {
+                    background: var(--culoare-2);
+                    a{
+                        color: var(--culoare-4);
+                    }
+            }
+            transition: all 700ms linear;
+        }
     }
+    ul.meniu{
+        #bara_meniu {
+                &::after{
+                display: none;
+            }
+        }
+        ul{
+            display: none; 
+            position: absolute;
+            width: 100%;
+        }
+        >li{
+            float: left;
+            width: 150px;
+            position: relative;
+            &:hover{
+                .submeniu{
+                    display: block;
+                    border: 1px solid black;
+                    transform-origin: 50% 0%;
+                    animation-name: meniu_drop;
+                    animation-iteration-count: 1;
+                    animation-duration: 0.5s;
+                    animation-fill-mode: forwards;
+                    animation-timing-function: linear;
+                }
+            }
+        }
+    }
+}
+
+ul.meniu > #meniu1 {
+    color: black;
+        &:hover {
+            background: var(--culoare-2);
+            span{
+                color: var(--culoare-4);
+            }
+            #acasa::before{
+                color: var(--culoare-4);
+            }
+    }
+    transition: all 700ms linear;
+}
+
 
 nav ul.meniu li{
     width:100%;
@@ -35,7 +94,6 @@ nav ul.meniu>li ul{
 
 @keyframes aparitie_meniu_mic{
     0%{
-        transform-origin: 0 0;
         transform: rotate(-90deg);
         opacity: 0;
     }
@@ -44,3 +102,11 @@ nav ul.meniu>li ul{
     }
 }
 
+@keyframes meniu_drop{
+    0%{
+    transform: scaleY(0);
+    }
+    100%{
+    transform: scaleY(1);
+    }  
+}

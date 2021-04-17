@@ -7,7 +7,7 @@ table {
     border-collapse: separate;
     border-spacing: 0;
     table-layout: fixed ;
-    /* min-width: 150%  nu arata bine*/
+    /* min-width: 150%; nu arata bine */
 }
 
 table tr th, table tr td {
