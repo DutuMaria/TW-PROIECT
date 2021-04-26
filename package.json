@@ -1,0 +1,30 @@
+{
+  "name": "proiect_tw",
+  "version": "1.0.0",
+  "description": "Site-badminton-club sportiv",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DutuMaria/TW-PROIECT.git"
+  },
+  "keywords": [
+    "club",
+    "sportiv",
+    "badminton",
+    "Shuttle",
+    "Life"
+  ],
+  "author": "Duțu Maria Alexandra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DutuMaria/TW-PROIECT/issues"
+  },
+  "homepage": "https://github.com/DutuMaria/TW-PROIECT#readme"
+}
