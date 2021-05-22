@@ -1,0 +1,14 @@
+WEBVTT - Some title
+
+STYLE
+::cue(.bg) {
+  background-color: #0E6580; 
+  width: 100%;
+}
+
+00:16.800 --> 00:19.000 align:start line:90% size:100%
+<c.bg>Point won by opponent.</c>
+
+00:22.000 --> 00:23.700 align:start line:90% size:100%
+<c.bg><b>Thank you</b> for watching!</c>
+

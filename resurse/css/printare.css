@@ -1,0 +1,131 @@
+@media print{
+html, body{
+    overflow: visible;
+}
+
+section, #welcome, #altele, #orar, #calendar, #anunturi, #utilizatori, #site, #statistici, #facilități, #index_intrebari{
+    break-inside: avoid;
+}
+
+#banner{
+    margin-left: 10vw;
+    margin-right: 10vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80vw;
+    height: 60px;
+    border: 3px dotted black;
+    animation: none;
+}
+
+#grid{
+    display: block;
+}
+
+
+#hr-stil{
+border: 1px solid black;
+background-color: black;
+height: 0.5px;
+overflow: visible;
+position: relative;
+width: 90%;
+}
+
+#hr-stil::before{
+content: "▶";
+font-size: large;
+color: black;
+float: left;
+position: relative;
+top: -9.5px;
+left: -12px;
+}
+
+#hr-stil::after{
+content: "◀";
+font-size: large;
+color: black;
+float: right;
+position: relative;
+top: -13px;
+right: -12px;
+}
+
+.flexbox{
+    display: none;
+}
+
+#sectiune-galerie-animata{
+    display:none;
+}
+
+#galerie-statica{
+    display: none;
+}
+
+#ifr-video{
+    display: none;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+#sus{
+    display:none;
+}
+
+#hamburger{
+    display: none;
+}
+
+#ch-menu{
+    display:none;
+}
+
+.titlu{
+    margin-top: 20rem;
+    text-align: center;
+    text-decoration: underline;
+    page-break-after: always;
+    font-size: 100px;   
+}
+
+footer{
+    page-break-before: always;
+}
+
+nav{
+    display:none;
+}
+
+summary{
+    display: block;
+}
+
+#watermark{
+width: 100px;
+height: 2cm;
+border: 2px double black;
+opacity: 0.65;
+position: fixed;
+bottom: 0;
+left:0;
+display: block;
+}
+
+@page:left{
+    size: A4 portrait;
+    margin-left: 2.5cm;
+    margin-right: 0.5cm;
+    }
+    
+@page:right{
+    size: A4 portrait;
+    margin-left: 0.5cm;
+    margin-right: 2.5cm;
+    }
+}

@@ -1,0 +1,89 @@
+main{
+    padding: 5%;
+}
+body{
+    --culoare-1: #cd853f;
+	--culoare-2:#FFB469;
+	--culoare-3:#804D1B;
+    --culoare-4: #0E6580;
+    --culoare-5: #3FABCC;
+    --culoare-6:#f8d8b8;
+}
+
+/* pentru toate produsele */
+.grid-produse{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap:15px;
+    column-gap:15px;
+}
+
+h2{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+
+#categorie{
+    text-align: center;
+}
+
+
+.container_info_si_poza{
+    display: grid;
+    grid-template-areas: "info poza";
+}
+
+.info-prod{
+    text-align: center;
+    grid-area: info;
+}
+
+figure{
+    position: relative;
+    left: 50px;
+    width: 300px;
+    grid-area: poza;
+}
+
+img{
+    width:60%;
+    height:auto;
+}
+
+.produs:hover{
+    border: 1px solid grey;
+    border-radius: 7%;
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    background-color: var(--culoare-6);
+    box-shadow: inset 0 0 10px var(--culoare-1);
+    transition: background-color 0.5s ease-in;
+}
+
+.produs{
+    padding: 5%;
+    border: 1px solid grey;
+    border-radius: 7%;
+    
+}
+
+@media screen and (max-width:1200px){
+    .grid-produse{
+        display: block;
+    }
+    .produs{
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width:700px){
+    .grid-produse{
+        display: block;
+    }
+    .produs{
+        padding: 10px;
+    }
+}

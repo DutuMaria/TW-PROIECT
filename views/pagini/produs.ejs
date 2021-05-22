@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang = "ro">
+    <head>
+        
+        <meta name = "description" content = "Clubul Sportiv Shuttle Life...">
+        <meta name = "keywords" content = "club sportiv, badminton, Shuttle Life">
+
+        <title><%- locals.prod.nume %></title>
+        <%- include("../fragmente/head") %>
+        <link href="/resurse/css/produs.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+    <%- include("../fragmente/header") %>
+    
+    <main>
+        <section>
+            <h2>Pagină produs</h2>
+            <article id="art-produs">
+                <h3><span class="nume"><%- locals.prod.nume %></span></h3>
+                <br>
+                <figure class="imag-produs">
+                    <img  src="/resurse/imagini/produse/<%- locals.prod.imagine %>"  alt="[imagine <%- locals.prod.nume %>]" />
+                </figure> 
+                <div class= "info"> 
+                    <p id = "cu_fundal_colorat">Pret: <span class="pret"><%- locals.prod.pret %> </span></p>
+                    <p id = "cu_fundal_colorat">Mărimi disponibile: <span class="marima"><%- locals.prod.marime %> </span></p>
+                    <p id = "cu_fundal_colorat">Rating score: <span class="rating"><%- locals.prod.rating_score %> </span></p>
+                    <p id = "cu_fundal_colorat">Gen: <span class="gen"><%- locals.prod.gen %> </span></p>
+                    <p id = "cu_fundal_colorat">Brand: <span class="brand"><%- locals.prod.brand %> </span></p>
+                    <p id = "cu_fundal_colorat">Categorie: <span class="categorie"><%- locals.prod.categorie %> </span></p>
+                    <p id = "cu_fundal_colorat">În stoc: <span class="in_stoc"><%- locals.prod.in_stoc %> </span></p>
+                    <p id = "cu_fundal_colorat">Data adăugare: <span class="data_adaugare"><%- locals.data %> </span></p>
+                    <p>Descriere: <span class="descriere"><%- locals.prod.descriere %> </span></p>
+                </div>  
+            </article>
+        </section>
+    </main>
+
+    <%- include("../fragmente/footer") %>
+    </body>
+</html>   
+                
+                
+                
+                
+                
+                
+                
+                
+                

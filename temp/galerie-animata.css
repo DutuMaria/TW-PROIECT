@@ -1,0 +1,170 @@
+#sectiune-galerie-animata {
+  padding-left: 40px;
+  /* variabila din css-ul general*/
+}
+
+.galerie-a {
+  margin: auto;
+  width: 400px;
+  height: 267px;
+  border: 15px solid;
+  border-image-source: url(https://thumbs.dreamstime.com/b/shuttlecock-frame-healthiness-concept-sport-background-idea-69087821.jpg);
+  border-image-slice: 70 70 70 70;
+  border-image-repeat: round;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 5rem;
+}
+
+.galerie-a figcaption {
+  position: absolute;
+  bottom: 0;
+  background: white;
+  width: 100%;
+  text-align: center;
+}
+
+.galerie-a figure {
+  width: 400px;
+  height: 267px;
+}
+
+#galerie-animata figure {
+  position: absolute;
+  left: -40px;
+  top: -16px;
+  z-index: 0;
+  animation-name: galerie-animata;
+  animation-play-state: running;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-duration: 45s;
+  transform-origin: center center;
+}
+
+#galerie-animata:hover figure {
+  animation-play-state: paused;
+}
+
+#galerie-animata figure:nth-of-type(15) {
+  animation-delay: 0s;
+}
+
+#galerie-animata figure:nth-of-type(14) {
+  animation-delay: 3s;
+}
+
+#galerie-animata figure:nth-of-type(13) {
+  animation-delay: 6s;
+}
+
+#galerie-animata figure:nth-of-type(12) {
+  animation-delay: 9s;
+}
+
+#galerie-animata figure:nth-of-type(11) {
+  animation-delay: 12s;
+}
+
+#galerie-animata figure:nth-of-type(10) {
+  animation-delay: 15s;
+}
+
+#galerie-animata figure:nth-of-type(9) {
+  animation-delay: 18s;
+}
+
+#galerie-animata figure:nth-of-type(8) {
+  animation-delay: 21s;
+}
+
+#galerie-animata figure:nth-of-type(7) {
+  animation-delay: 24s;
+}
+
+#galerie-animata figure:nth-of-type(6) {
+  animation-delay: 27s;
+}
+
+#galerie-animata figure:nth-of-type(5) {
+  animation-delay: 30s;
+}
+
+#galerie-animata figure:nth-of-type(4) {
+  animation-delay: 33s;
+}
+
+#galerie-animata figure:nth-of-type(3) {
+  animation-delay: 36s;
+}
+
+#galerie-animata figure:nth-of-type(2) {
+  animation-delay: 39s;
+}
+
+#galerie-animata figure:nth-of-type(1) {
+  animation-delay: 42s;
+}
+
+/*cum calculam timpii:
+- avem 7 poze; vrem pentru fiecare un timp de afisare de 1.5 secunde si o trecere spre urmatoarea poza de 1.5 secunde
+- rezulta 3 secunde pentru fiecare imagine
+- 7imagini * 3secunde =21 secunde in total pentru animatie (animation-duration) si fiecare poza cu un delay = 3* numarul de ordine
+- momentul in care trebuie ascunsa poza si pusa in spatele celorlalte (ca sa isi astepte randul pentru noua animatie:
+il calculam cu formula  timp_afisare(normal+trecerea la urmatoarea poza)/timp_total*100 = 3/21*100 =  14.285714(aproximativ)
+100%..... 21s
+x%........3s
+
+- calculam 100-14.285714=85.714286 - la acest moment imaginea trebuie sa se vada in spatele imaginii care se afiseaza in mod curent (ca sa se vada si cat timp se realizeaza efectul de schimbare a imaginii
+
+!!!!!!!!!!!!!!!!!!!!!!!!CALCULE PT 12 IMAG
+3/36*100 = 8.33
+100 - 8.33 = 91.67
+*/
+@keyframes galerie-animata {
+  0% {
+    z-index: 10;
+    opacity: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 0 100%);
+  }
+  3.3333333333% {
+    z-index: 10;
+    opacity: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 0 100%);
+  }
+  6.6666666667% {
+    z-index: 10;
+    opacity: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 100% 0, 0 0, 0 100%, 0 100%);
+  }
+  6.6666676667% {
+    z-index: -10;
+    opacity: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 0 100%);
+  }
+  93.3333333333% {
+    z-index: -10;
+    opacity: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 0 100%);
+  }
+  93.3333343333% {
+    z-index: 0;
+  }
+  100% {
+    z-index: 0;
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #sectiune-galerie-animata {
+    display: none;
+  }
+}
+@media screen and (max-width: 750px) {
+  #sectiune-galerie-animata {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=galerie-animata.css.map */

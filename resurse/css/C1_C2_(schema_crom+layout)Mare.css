@@ -5,6 +5,7 @@
 @import "C6_taburi(flexbox).css";
 @import "countere.css";
 @import "C5_link-top.css";
+@import "galerie-statica.css";
 
 
 
@@ -13,6 +14,8 @@ html{
     font-size:16px;
 }
 
+/* TO DO */
+/* se mai adauga niste proprietati la body, body dark si urmatorul body */
 body{
 
     --culoare-1: #cd853f;
@@ -21,13 +24,29 @@ body{
     --culoare-4: #0E6580;
     --culoare-5: #3FABCC;
 
+}
+
+body.dark{
+    --culoare-1: #FF7E14;
+	--culoare-2: #FF8C2E;
+	--culoare-3: #B35200;
+    --culoare-4: #0099B3;
+    --culoare-5: #14DDFF;
+}
+
+
+body{
+
     margin-top:0;
     margin-bottom:0;
     --body-padding:3rem;
 
     --padding-intern:4%;
 
-    background-image: url("../imagini/badminton.jpg");
+    background-image: url("../imagini/badminton.jpg"); 
+
+    /* functioneaza normal, dar daca o pun pe cea de mai jos nu se mai vede fara node */
+    /* background-image: url("/resurse/imagini/badminton.jpg"); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -151,5 +170,8 @@ q{
     text-align: center;
 }
 
+#watermark{
+    display: none;
+}
 
 

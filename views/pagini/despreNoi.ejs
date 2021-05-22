@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang = "ro">
+    <head>
+        
+        <meta name = "description" content = "Clubul Sportiv Shuttle Life...">
+        <meta name = "keywords" content = "club sportiv, badminton, Shuttle Life">
+        <link rel="stylesheet" type="text/css" href="/resurse/css/despreNoi.css" />
+        <title>Clubul Sportiv Shuttle Life</title>
+        <%- include("../fragmente/head") %>
+    </head>
+    <body>
+    <%- include("../fragmente/header") %>
+    
+    <main>
+        <section>
+            <h2>Despre noi</h2>
+            <p><b>Clubul Sportiv</b><b> Shuttle Life</b> este cel mai nou club privat de <b>badminton</b> din București. Suntem o comunitate alcătuită din oameni energici și pasionați de mișcare!</p>
+            <p>Vă așteptăm în echipa noastră!</p>
+            <br>
+                <video id = "video" controls preload="auto" poster="/resurse/imagini/badminton7.jpg">
+                    <source src = "/resurse/video/video.mp4" type = "video/mp4">
+                    <source src = "/resurse/video/video.ovg" type = "video/ovg">
+                
+
+                    <track default src ="/resurse/video/tracks/my_captions.vtt"
+                    kind = "captions" srclang = "ro" label = "română"/>
+                    <track src ="/resurse/video/tracks/my_captions-en.vtt"
+                    kind = "captions" srclang = "en" label = "english"/>
+                </video>
+        </section>
+    </main>
+
+    <%- include("../fragmente/footer") %>
+    </body>
+</html>

@@ -1,0 +1,130 @@
+{
+	"cale_galerie":"resurse/imagini/galerie",
+	"imagini": [
+		{
+			"cale_fisier":"1.png",
+			"titlu":"Antrenor",
+			"alt":"text",
+			"text_descriere":"Photo by Muktasim Azlan on Unsplash",
+			"luni":["decembrie","ianuarie","februarie"]
+		},
+		{
+			"cale_fisier":"2.png",
+			"titlu":"Jucător 1",
+			"alt":"text",
+			"text_descriere":"Photo by Jackie Hutchinson on Unsplash",
+			"luni":["decembrie","ianuarie","februarie"]
+		},
+		{
+			"cale_fisier":"3.png",
+			"titlu":"Fluturași",
+			"alt":"text",
+			"text_descriere":"Photo by Salman Hossain Saif on Unsplash",
+			"luni":["iunie","iulie","august"]
+		},
+		{
+			"cale_fisier":"4.png",
+			"titlu":"Peisaj",
+			"alt":"text",
+			"text_descriere":"Photo by Bob Osias on Unsplash",
+			"luni":["septembrie","octombrie","noiembrie"]
+		},
+		{
+			"cale_fisier":"5.png",
+			"titlu":"Jucător 2",
+			"alt":"text",
+			"text_descriere":"Photo by Jackie Hutchinson on Unsplash",
+			"luni":["decembrie","ianuarie","februarie"]
+		},
+		{
+			"cale_fisier":"6.png",
+			"titlu":"Fluturaș 1",
+			"alt":"text",
+			"text_descriere":"Photo by Salman Hossain Saif on Unsplash",
+			"luni":["martie","aprilie"]
+		},
+		{
+			"cale_fisier":"7.png",
+			"titlu":"Fluturaș 2",
+			"alt":"text",
+			"text_descriere":"Photo by Siora Photography on Unsplash ",
+			"luni":["iunie","iulie","august"]
+		},
+		{
+			"cale_fisier":"8.png",
+			"titlu":"Fluturaș 3",
+			"alt":"text",
+			"text_descriere":"Photo by Salman Hossain Saif on Unsplash",
+			"luni":["septembrie","octombrie","noiembrie", "mai"]
+		},
+		{
+			"cale_fisier":"9.png",
+			"titlu":"Jucător 3",
+			"alt":"text",
+			"text_descriere":"Photo by Mahmur Marganti on Unsplash",
+			"luni":["decembrie","ianuarie","februarie", "mai"]
+		},
+		{
+			"cale_fisier":"10.png",
+			"titlu":"Jucător 4",
+			"alt":"text",
+			"text_descriere":"Photo by Mahmur Marganti on Unsplash",
+			"luni":["martie","aprilie","mai"]
+		},
+		{
+			"cale_fisier":"11.png",
+			"titlu":"Jucător 5",
+			"alt":"text",
+			"text_descriere":"Photo by Jason Peter on Unsplash",
+			"luni":["iunie","iulie","august", "mai"]
+		},
+		{
+			"cale_fisier":"12.png",
+			"titlu":"Fluturas 4",
+			"alt":"text",
+			"text_descriere":"Photo by Salman Hossain Saif on Unsplash",
+			"luni":["septembrie","octombrie","noiembrie", "mai"]
+  
+		},
+		{
+			"cale_fisier":"13.png",
+			"titlu":"Fluturas 5",
+			"alt":"text",
+			"text_descriere":"Photo by Jier Chen from Pexels",
+			"luni":["mai","octombrie","noiembrie"]
+  
+		},
+		{
+			"cale_fisier":"14.png",
+			"titlu":"Serviciu",
+			"alt":"text",
+			"text_descriere":"Photo by Vladislav Vasnetsov from Pexels",
+			"luni":["mai","octombrie","ianuarie"]
+  
+		},
+		{
+			"cale_fisier":"15.png",
+			"titlu":"Rachete și fluturași",
+			"alt":"text",
+			"text_descriere":"Photo by eric anada from Pexels",
+			"luni":["mai","august","ianuarie"]
+  
+		},
+		{
+			"cale_fisier":"16.png",
+			"titlu":"Fluturas 6",
+			"alt":"text",
+			"text_descriere":"Photo by Leo Zhao from Pexels",
+			"luni":["mai","august","ianuarie"]
+		},
+		{
+			"cale_fisier":"17.png",
+			"titlu":"Rachete",
+			"alt":"text",
+			"text_descriere":"Photo by moerschy from Pixabay ",
+			"luni":["mai","august","ianuarie"]
+		}
+   
+	]
+ }
+ 

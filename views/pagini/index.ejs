@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang = "ro">
+    <head>
+        
+        <meta name = "description" content = "Clubul Sportiv Shuttle Life...">
+        <meta name = "keywords" content = "club sportiv, badminton, Shuttle Life">
+     
+        
+        <link rel="stylesheet" href="/resurse/css/galerie-animata.css" type="text/css" />
+        <link rel="stylesheet" href="/resurse/css/galerie-statica.css" type="text/css" />
+        
+        <title>Clubul Sportiv Shuttle Life</title>
+        <%- include("../fragmente/head") %>
+    </head>
+    <body>
+    <%- include("../fragmente/header") %>
+    
+    <main>
+        <div id="grid">
+            <div id="welcome">
+                <p id= "citat"><q><i lang = "en">The five S’s of sports training are: stamina, speed, strength, skill, and spirit; but the greatest of these is spirit.</i></q>-Ken Doherty</p>
+                <section>
+                    <h2>Bine ați venit!</h2>
+                    <button id = "schimbare-tema">Schimbă tema</button>
+
+                    <% if (!locals.utilizator) { %>
+                        <!-- unde se inchide p? -->
+                        <p>Vă rugăm să vă logați: </p>
+                            <form id = "login" method = "post" action = "/login">
+
+                                <label>
+                                    Username: <input type = "text" name = "username" value = "cosmin123">
+                                </label>
+
+                                <label>
+                                    Parolă: <input type = "password" name = "parola" value = "">
+                                </label>
+                                
+                                <input type = "submit" value="Login">
+
+                            </form>
+                            <% } %>
+
+                    <!-- <p>Ce înseamnă <b>badminton</b>?</p>
+                    <blockquote cite="https://ro.wikipedia.org/wiki/Badminton">
+                        Badmintonul este un sport în care doi jucători sau două perechi de jucători joacă plasându-se fiecare de câte o parte a unui fileu care împarte terenul dreptunghiular în două jumătăți egale. Cei doi jucători sau două perechi câștigă puncte lovind un fluturaș (minge) cu racheta astfel încât acesta să treacă peste fileu și să aterizeze în terenul advers.
+                    </blockquote> -->
+                </section>
+            </div>
+            <div id="video">
+                <section>
+                    <h2>Videoclipuri</h2>
+                    <div class= "flexbox">
+                        <div class = "butoane">
+                            <div class= "item"><a href="https://www.youtube.com/embed/4mqp8floYGQ" target="ifr-video">Expectations vs Reality</a></div>
+                            <div class= "item"><a href="https://www.youtube.com/embed/IbsU6uR_GnA" target="ifr-video">Badminton - crazy shots</a></div>
+                        </div>
+                    </div>
+                    <iframe id = "ifr-video" name = "ifr-video" width="320" height="240" src="https://www.youtube.com/embed/4mqp8floYGQ"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </section>
+            </div>
+            <div id="facilități"> 
+                <section>
+                    <h2>Facilități</h2>
+                    <ul>
+                        <li>7 terenuri de <b>badminton</b></li>
+                        <li>o sala de fitness</li>
+                        <li>aparate de ultima generație marca Technogym</li>
+                        <li>vestiare prevăzute cu sauna</li>
+                        <li>locuri de parcare permanent supravegheate</li>
+                        <li>restaurant</li>
+                    </ul>
+                </section>
+            </div>
+            <!-- <div id="concursuri">
+                <section>
+                    <h2>Concursuri de badminton organizate de Shuttle Life</h2>
+                    <p>Se desfășoară mai multe tipuri de <b>concursuri</b> în fiecare an.</p>
+                    <p>Mai multe <b>concursuri</b> pe: <a href="https://www.tournamentsoftware.com" target="_blank">TournamentSoftware.com</a></p>
+                    <p>Toate tipurile de <b>concursuri</b> au următoarele probe:</p>
+                    <ol>
+                        <li>MS</li>
+                        <li>WS</li>
+                        <li>MD</li>
+                        <li>WD</li>
+                        <li>XD</li>
+                    </ol>
+                </section>
+            </div>
+                <div id = "nationale">
+                    <section>
+                        <h3>Concursuri naționale</h3>
+                        <details><summary>Aceste <b>concursuri</b> sunt pe diferite categorii de vârstă.</summary>
+                        <ol>
+                            <li>U9</li>
+                            <li>U11</li>
+                            <li>U13</li>
+                            <li>U15</li>
+                            <li>U17</li>
+                            <li>U19</li>
+                            <li>U23</li>
+                            <li>Elite</li>
+                        </ol>
+                        </details>
+                    </section>
+                </div>
+                <div id = "amatori">
+                    <section>
+                        <h3>Concursuri pentru amatori</h3>
+                        <details><summary>Aceste <b>concursuri</b> sunt pe diferite categorii în funcție de numărul de puncte acumulate.</summary>
+                        <dl>
+                            <dt>A</dt>
+                            <dd>Jucatorii al caror punctaj este mai mare sau egal cu 541 au dreptul sa joace doar la categoria A</dd>
+                            <dt>B</dt>
+                            <dd>Jucatorii al caror punctaj este mai mare sau egal cu 271 au dreptul sa joace doar la categoriile A și B</dd>
+                            <dt>C</dt>
+                            <dd>Jucatorii al caror punctaj este sub 271 au dreptul sa joace la toate categoriile </dd>
+                        </dl>
+                        <aside>
+                            <p>La concursurile pentru amatori nu se pot înscrie actuali sau foști jucători participanți în cadrul campionatului național. Înscrierea jucătorilor în diferitele categorii se va face ținând cont de valoarea jucătorilor și de rezultatele obținute la alte concursuri.</p>
+                        </aside>
+                    </details>
+                    </section>
+                </div> -->
+            <div id="index_intrebari">
+                <section>
+                    <h2>Întrebări frecvente</h2>
+                    <details><summary>Aveți personal calificat pentru inițierea în sport?</summary>
+                        <p>DA!</p>
+                    </details>
+                    <details><summary>Doar jucătorii înscriși la club pot participa la <b>concursuri?</b></summary>
+                        <p>La concursurile oficiale pot participa doar jucătorii înscriși la un club, dar există și concursuri pentru amatori, destinat celor care nu sunt înscriși la un club</p>
+                    </details>
+                    <details><summary>Abonamentul se aplică doar celori înscriși la club?</summary>
+                        <p>DA!</p>
+                    </details>
+                </section>
+            </div>
+            <div id="orar">
+                <h2><i class="fas fa-calendar"></i>  Orar antrenamente</h2>
+                <div id = tabel_container>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Luni</th>
+                            <th>Marți</th>
+                            <th>Miercuri</th>
+                            <th>Joi</th>
+                            <th>Vineri</th>
+                            <th>Sâmbătă</th>
+                            <th>Duminică</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class = "rand">
+                            <td>09:00-11:00</td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                        </tr>
+                        <tr class = "rand">
+                            <td>11:00-13:00</td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class = "rand">
+                            <td>13:00-15:00</td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class = "rand">
+                            <td>15:00-17:00</td>
+                            <td></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class = "rand">
+                            <td>17:00-19:00</td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class = "rand">
+                            <td>19:00-21:00</td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                            <td><i class="far fa-check-circle"></i></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class = "rand">
+                            <td>Ore/zi</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+                </div>
+            </div>
+            <div id="calendar">
+                <h2>Evenimente</h2>
+                <p>Concurs U15 București: 16-18 Aprilie</p>
+                <p>Concurs U19 București: 23-25 Aprilie</p>
+                <p>Concurs U13 București: 14-16 Mai</p>
+                <p>Concurs U13 București: 28-30 Mai</p>
+                <p>Cantonament (locația: <abbr title="To Be Announced"><i lang = "en">TBA</i></abbr>) 21-27 Iunie </p>
+
+            </div>
+            <div id="anunțuri">
+                <h2> <i class="fas fa-asterisk fa-spin"></i> Anunțuri</h2>
+                <p>Antrenamentele de pe 26 Aprilie sunt anulate!</p>
+                <p>Antrenamentele de la 13:00-15:00 din această săptamână sunt destinate grupei de performanță!</p>
+            </div>
+            <div id="utilizatori">
+                <h2>Utilizatori online</h2>
+                <p>Ip: <%- locals.ip %></p>
+                
+            </div>
+            <div id="statistici">
+                <h2>Utilizatori și statistici</h2>
+                <p>Aliquam consequat urna nisi, et bibendum arcu interdum in. Suspendisse consequat gravida metus non ultrices. Sed quis imperdiet tortor.</p>
+                <hr id = "hr-stil">
+            </div>
+            <div id="site">
+                <h2>Site și server</h2>
+                <p>Integer augue metus, luctus eu posuere quis, semper vel urna. Proin eget hendrerit nisi. In hac habitasse platea dictumst. Maecenas nec ultricies lectus.</p>
+            </div>
+        </div>
+        <%- include("../fragmente/galerieS") %>
+        <br>
+        <br>
+        <%- include("../fragmente/galerieA") %>
+    </main>
+
+
+    <div id = "banner">
+        <p><i class="fas fa-exclamation-triangle"></i> Acesta este un proiect pentru facultate <i class="fas fa-exclamation-triangle"></i></p>
+    </div>
+    <div id = "watermark">Duțu Maria Alexandra</div>
+
+    <%- include("../fragmente/footer") %>
+    </body>
+</html>

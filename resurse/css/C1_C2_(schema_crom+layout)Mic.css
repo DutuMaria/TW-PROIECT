@@ -23,7 +23,7 @@ body{
 
     --padding-intern:4%;
 
-    background-image: url("../imagini/badminton.jpg");
+    background-image: url("/resurse/imagini/badminton.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

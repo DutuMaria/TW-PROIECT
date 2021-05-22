@@ -1,0 +1,54 @@
+<header>
+    <h1 class = "titlu">Clubul sportiv <span>Shuttle Life</span></h1>
+    <nav>
+
+        <label id="hamburger" for="ch-menu">
+            <img src="/resurse/imagini/Hamburger_icon_alb.png" alt="menu">
+        </label>
+        <input id="ch-menu" type="checkbox">
+
+        <ul class = "meniu">
+            <li id = "meniu1"><div id = "acasa"><span>Acasă</span></div>
+                <ul class = "submeniu">
+                    <li><a href = "/index#welcome">Bine ați venit!</a></li>
+                    <li><a href = "/index#orar">Orar antrenamente</a></li>
+                    <li><a href = "/index#calendar">Evenimente</a></li>
+                    <li><a href = "/index#anunțuri">Anunțuri</a></li>
+                    <li><a href = "/index#utilizatori">Utilizatori online</a></li>
+                    <li><a href = "/index#statistici">Statistici</a></li>
+                    <li><a href = "/index#site">Server și site</a></li>
+                    <li><a href = "/index#facilități">Facilități</a></li>
+                    <!-- <li><a href = "/index#concursuri">Concursuri</a></li> -->
+                    <li><a href = "/index#index_intrebari">Întrebări frecvente</a></li>
+                </ul>
+            </li>
+            <li id = "meniu1"><a href = "#"><span>Despre noi</span></a>
+                <ul class = "submeniu">
+                    <li><a href = "/despreNoi#prezentare">Prezentare</a></li> 
+                    <li><a href = "/galerieStatica">Galerie statica</a></li>
+                    <li><a href = "/galerieAnimata">Galerie animata</a></li>
+                </ul>
+            </li>
+            <li id = "meniu1"><a href = "#"><span>Magazin</span></a>
+                <ul class = "submeniu">
+                    <li><a href = "/produse">Toate produsele</a></li>
+                    <li><a href = "/produse?categorie=haine">Haine</a></li>
+                    <li><a href = "/produse?categorie=adidasi">Adidasi</a></li>
+                    <!-- <li><a href = "#rachete">Rachete</a></li> -->
+                    <!-- <li><a href = "#accesorii">Accesorii</a></li> -->
+
+                </ul>
+            </li>
+            <li id = "meniu1"><a href="/inregistrare" id = "bara_meniu"><span>Înregistrare</span></a></li>
+            <!-- daca mai sunt pagini fara submeniu trebuie pus id ul bara_meniu!!!!!! -->
+
+            <% if (locals.utilizator && locals.utilizator.rol=="admin") {%>
+            <li><a href = "/useri">Utilizatori</a></li>
+            <% } %>
+            <% if (locals.utilizator) {%>
+                <li><a href = "#"><%- locals.utilizator.username %></a></li>
+                <li><a href = "/logout">Logout</a></li>
+            <% } %>
+        </ul>
+    </nav>
+</header>

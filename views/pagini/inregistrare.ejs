@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang = "ro">
+    <head>
+        
+        <meta name = "description" content = "Clubul Sportiv Shuttle Life...">
+        <meta name = "keywords" content = "club sportiv, badminton, Shuttle Life">
+       
+        <script type ="text/javascript" src="/resurse/js/inregistrare.js"></script>
+        <title>Inregistrare utilizator</title>
+        
+        <%- include("../fragmente/head") %>
+    </head>
+    <body>
+    <%- include("../fragmente/header") %>
+
+    <main>
+        <div class = "afisaj">
+               <h2>Înregistrare utilizator</h2>
+
+
+           <% if (locals.err !="") { %>
+            <form  id = "form_inreg" method = "post" class ="date" action ="/inreg" id = "inregistrare" enctype="multipart/form-data">
+                <p>
+                    <label>
+                        Username: <input type ="text" name ="username" value ="utilizator<%= Math.floor(Math.random()*100000) %>" required pattern="[A-Za-z0-9]+">
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Nume: <input required type ="text" name ="nume" value ="Popescu">
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Prenume: <input required type ="text" name ="prenume" value ="Adina">
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Parolă: <input required type ="password" name ="parola" value ="">
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Reintroduceți parola: <input required type ="password" name ="rparola" value ="">
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Email: <input required type ="text" name ="email" value ="utilizator123@gmail.com" size ="50">
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Culoare text chat: <select nume = "culoare_chat"><option value = "red">Roșu</option><option value = "green">Verde</option><option value = "blue">Albastru</option><option value = "yellow">Galben</option><option value = "purple">Mov</option><option value = "pink">Roz</option></select>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Poză: <input type ="file" name ="poza">
+                    </label>
+                </p>
+                <p>
+                       <input type = "submit" value ="Trimite">
+                       <input type = "reset" value = "Resetează"> 
+                </p>
+            </form>
+
+            <% } %>
+            <% if(locals.raspuns) { %>
+                <%- locals.raspuns+"<br/>" %>
+            <% } %>
+            <% if(locals.err) { %>
+                <%- locals.err  %>
+            <% } %>
+            </div>
+    </main>
+
+    <%- include("../fragmente/footer") %>
+    </body>
+</html>

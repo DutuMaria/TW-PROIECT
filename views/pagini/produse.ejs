@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang = "ro">
+    <head>
+        
+        <meta name = "description" content = "Clubul Sportiv Shuttle Life...">
+        <meta name = "keywords" content = "club sportiv, badminton, Shuttle Life">
+        <link rel="stylesheet" href="/resurse/css/produse.css" type="text/css">
+
+        <title>Clubul Sportiv Shuttle Life</title>
+        <%- include("../fragmente/head") %>
+        <script type="text/javascript" src= "/resurse/js/produse.js"></script>
+    </head>
+    <body>
+    <%- include("../fragmente/header") %>
+    
+    <main>
+        <label> Căutare după nume: <input type="text" id="nume_produs" value=""></label>
+        <label> Rating minim: <input type="range" id="inp-rating" value="0" min="0"  max="5"></label>
+        <p>Gen: 
+            <label>
+                Ambele<input id="i_rad" name="gr_rad" value="" type="radio">
+            </label>
+        <% for(let valoare of locals.genuri) { %>
+            <label>
+                <%- valoare.gen %><input id="i_rad" name="gr_rad" value="<%- valoare.gen %>" type="radio">
+            </label>
+        <% } %></p>
+        <p>Selectați brandul: </p>
+        <% for(let valoare of locals.branduri) { %>
+            <label> 
+                <input id="i_check" name="gr_chck" value="<%- valoare.brand %>" type="checkbox"><%- valoare.brand %>:
+            </label>
+            <br>
+        <% } %>
+        <br>
+        <label>În stoc:
+            <select id="inp-stoc">
+                <option value="toate">toate</option>
+                <% for( let valoare of locals.stoc) { %>
+                    <option value="<%- valoare.stoc %>"><%- valoare.stoc %></option>
+                <% } %><>
+            </select>
+        </label>
+        <br>
+        <br>
+        <label>Prețuri: 
+            <select id="i_sel_multiplu" multiple size="3">
+                <option value="6-25">6-25</option>
+                <option value="25-45">25-45</option>
+                <option value="45-65">45-65</option>
+                <option value="65-85">65-85</option>
+                <option value="85-125">85-125</option>
+            </select>
+        </label>
+        <p>
+        <button id="filtrare">Filtreaza</button>
+        <button id="sortCrescPret">Sortează crescător după preț</button>
+        <button id="sortDescrescPret">Sortează descrescător după preț</button>
+        <button id="resetare">Reseteaza</button>
+        </p>
+        <p id="p-suma">Apasați Alt+"c" pentru suma preturilor produselor afișate. </p>
+       
+        <section id="produse">
+            <h2>Produse</h2>
+            <br>
+            <br>
+            <div class="grid-produse">
+                <% for( let prod of locals.produse) { %>
+                    <article class="produs">
+                        <p class="id">Nr. produs: <span class="val-id"><%- prod.id%></span></p>
+                        <h3 class="nume"> <a href="/produs/<%-prod.id %>" ><span class="val-nume"><%- prod.nume%></span></a></h3>
+                        <p id= "categorie">Categorie: <span class="categorie"><%- prod.categorie %> </span></p>
+                        <div class="container_info_si_poza">
+                            <div class="info-prod">
+                                <p class="pret">Pret: <span class="val-pret"><%- prod.pret%></span></p>
+                                <p class="gen">Gen: <span class="val-gen"><%- prod.gen%></span></p>
+                                <p class="marime">Mărimi: <span class="val-marime"><%- prod.marime%></span></p>
+                                <p class="in_stoc">În stoc: <span class="val-in_stoc" style="color:red"><%- prod.in_stoc%></span></p>
+                                <p>Rating score: <span class="rating"><%- prod.rating_score %> </span></p>
+                                <p class="brand">Brand: <span class="val-brand"><%- prod.brand%></span></p>
+                            </div>
+                            <figure>
+                                <img src="/resurse/imagini/produse/<%- prod.imagine %>" alt="[imagine <%- prod.nume %>]" />
+                            </figure>
+                        </div>
+                    </article>
+                <% }%>
+            </div>
+        </section>
+    </main>
+
+    <%- include("../fragmente/footer") %>
+    </body>
+</html>
