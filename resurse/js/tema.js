@@ -1,4 +1,4 @@
-window.addEventListener("load", function(){
+window.addEventListener("DOMContentLoaded", function(){
     let tema = localStorage.getItem("tema");
     if (tema == "dark")
         document.body.classList.add("dark");

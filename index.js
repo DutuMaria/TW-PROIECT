@@ -293,7 +293,7 @@ app.get("/produs/:id_produs",function(req, res){
             let zi_cuvant = zile[rezData.rows[0].data_adaugare.getDay()];
             let luna = luni[rezData.rows[0].data_adaugare.getMonth()];
             
-        res.render("pagini/produs", {prod:rez.rows[0], utilizator: req.session.utilizator, data: zi_cuvant + ", " + zi_nr + "-" + luna + "-" + an});//obiectul {a:10,b:20} poarta numele locals in ejs  (locals["a"] sau locals.a)
+        res.render("pagini/produs", {prod:rez.rows[0], utilizator: req.session.utilizator, data: zi_cuvant + ", " + zi_nr + "-" + luna + "-" + an});
         });
     });
 });

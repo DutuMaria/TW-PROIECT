@@ -18,7 +18,7 @@
         <label> Rating minim: <input type="range" id="inp-rating" value="0" min="0"  max="5"></label>
         <p>Gen: 
             <label>
-                Ambele<input id="i_rad" name="gr_rad" value="" type="radio">
+                Ambele<input id="i_rad" name="gr_rad" value="ambele" type="radio" checked>
             </label>
         <% for(let valoare of locals.genuri) { %>
             <label>
@@ -28,14 +28,14 @@
         <p>Selectați brandul: </p>
         <% for(let valoare of locals.branduri) { %>
             <label> 
-                <input id="i_check" name="gr_chck" value="<%- valoare.brand %>" type="checkbox"><%- valoare.brand %>:
+                <input id="i_check" name="gr_chck" value="<%- valoare.brand %>" type="checkbox" checked><%- valoare.brand %>:
             </label>
             <br>
         <% } %>
         <br>
         <label>În stoc:
             <select id="inp-stoc">
-                <option value="toate">toate</option>
+                <option  value="toate" selected>toate</option>
                 <% for( let valoare of locals.stoc) { %>
                     <option value="<%- valoare.stoc %>"><%- valoare.stoc %></option>
                 <% } %><>
@@ -45,11 +45,11 @@
         <br>
         <label>Prețuri: 
             <select id="i_sel_multiplu" multiple size="3">
-                <option value="6-25">6-25</option>
-                <option value="25-45">25-45</option>
-                <option value="45-65">45-65</option>
-                <option value="65-85">65-85</option>
-                <option value="85-125">85-125</option>
+                <option value="6-25" selected>6-25</option>
+                <option value="25-45" selected>25-45</option>
+                <option value="45-65" selected>45-65</option>
+                <option value="65-85" selected>65-85</option>
+                <option value="85-125" selected>85-125</option>
             </select>
         </label>
         <p>
@@ -58,7 +58,6 @@
         <button id="sortDescrescPret">Sortează descrescător după preț</button>
         <button id="resetare">Reseteaza</button>
         </p>
-        <p id="p-suma">Apasați Alt+"c" pentru suma preturilor produselor afișate. </p>
        
         <section id="produse">
             <h2>Produse</h2>
@@ -67,7 +66,7 @@
             <div class="grid-produse">
                 <% for( let prod of locals.produse) { %>
                     <article class="produs">
-                        <p class="id">Nr. produs: <span class="val-id"><%- prod.id%></span></p>
+                        <p class="id">articol_<span class="val-id"><%- prod.id%></span></p>
                         <h3 class="nume"> <a href="/produs/<%-prod.id %>" ><span class="val-nume"><%- prod.nume%></span></a></h3>
                         <p id= "categorie">Categorie: <span class="categorie"><%- prod.categorie %> </span></p>
                         <div class="container_info_si_poza">

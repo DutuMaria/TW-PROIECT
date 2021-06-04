@@ -18,6 +18,7 @@ window.onload =function(){
         
         inp=document.getElementById("inp-rating");
         let minRating=inp.value;
+    
 
         let sel=document.getElementById("inp-stoc");
         let selectStoc=sel.value;
@@ -33,11 +34,11 @@ window.onload =function(){
 
 
 		// preluarea datelor din radiobutton-urile bifate ==> gen
-        var lista_radiobuttons =[];
+        var val_radiobuttons;
 		var radiobuttons=document.getElementsByName("gr_rad");		
 		for(let rad of radiobuttons){
 			if(rad.checked){
-				lista_radiobuttons.push(rad.value);
+				val_radiobuttons = rad.value;
 				break;//iesim din for deaorece doar un radiobutton din grup poate fi bifat (si tocmai l-am gasit)
 			}
 		}
@@ -54,40 +55,52 @@ window.onload =function(){
 
 
         var produse=document.getElementsByClassName("produs");
-    
-        for (let prod of produse){
-            prod.style.display="none";
-           
-            let nume_prod= prod.getElementsByClassName("val-nume")[0].innerHTML;
-            let conditie1= nume_prod==nume;
 
-            let rating_prod= parseInt(prod.getElementsByClassName("rating")[0].innerHTML)
-            let conditie2= rating_prod>=minRating;
+        //numele are litere, cifre, spatii si "-"
+        // if(!nume.match("^[A-Za-z0-9∼- ]+$")){
+        //     alert("Numele a fost introdus greșit!");
+        // }
+        // else{
+            for (let prod of produse){
+                prod.style.display="none";
+            
+                let nume_prod= prod.getElementsByClassName("val-nume")[0].innerHTML;
+                let conditie1= nume_prod==nume;
 
-            let stoc_prod= prod.getElementsByClassName("val-in_stoc")[0].innerHTML;
-            let conditie3= (stoc_prod==selectStoc || selectStoc=="toate");
+                let rating_prod= parseInt(prod.getElementsByClassName("rating")[0].innerHTML)
+                let conditie2= rating_prod>=minRating;
 
-            let brand_prod= prod.getElementsByClassName("val-brand")[0].innerHTML;
-            let conditie4=  lista_checkboxes.includes(brand_prod); 
+                let stoc_prod= prod.getElementsByClassName("val-in_stoc")[0].innerHTML;
+                let conditie3= (stoc_prod==selectStoc || selectStoc=="toate");
 
-            let gen_prod= prod.getElementsByClassName("val-gen")[0].innerHTML;
-            let conditie5=  lista_radiobuttons.includes(gen_prod); 
+                let brand_prod= prod.getElementsByClassName("val-brand")[0].innerHTML;
+                let conditie4=  lista_checkboxes.includes(brand_prod); 
 
-            let pret_prod = parseInt(prod.getElementsByClassName("val-pret")[0].innerHTML);
-            let conditie6 = false;
-            for (let val of lista_optiuni_multiple){
-                let inedex_caracter_despartitor = val.indexOf("-");
-                if(parseInt(val.slice(0, inedex_caracter_despartitor)) <= pret_prod && pret_prod <= parseInt(val.slice(inedex_caracter_despartitor+1))){
-                    conditie6 = true;
-                    break;
+                let gen_prod= prod.getElementsByClassName("val-gen")[0].innerHTML;
+                let conditie5=  val_radiobuttons==gen_prod || val_radiobuttons=="ambele"; 
+
+                let pret_prod = parseInt(prod.getElementsByClassName("val-pret")[0].innerHTML);
+                let conditie6 = false;
+                for (let val of lista_optiuni_multiple){
+                    let inedex_caracter_despartitor = val.indexOf("-");
+                    if(parseInt(val.slice(0, inedex_caracter_despartitor)) <= pret_prod && pret_prod <= parseInt(val.slice(inedex_caracter_despartitor+1))){
+                        conditie6 = true;
+                        break;
+                    }
+                }
+
+            
+                if (nume){
+                    if (conditie1){
+                        prod.style.display="block";
+                    }
+                }
+                else{
+                    if (conditie2 && conditie3 && conditie4 && conditie5 && conditie6)
+                        prod.style.display="block";
                 }
             }
-
-            // let conditieFinala=conditie1 && conditie2 && conditie3 && conditie4 && conditie5 && conditie6;
-            
-            if (conditie1 || (conditie2 && conditie3 && conditie4 && conditie5 && conditie6))
-                prod.style.display="block";
-        }
+        // }
     }
 
 
@@ -128,6 +141,29 @@ window.onload =function(){
         for (let prod of produse){
             prod.style.display="block";
         }
+
+        document.getElementById("nume_produs").value = "";
+        document.getElementById("inp-rating").value = "0";
+        range.nextSibling.nextSibling.innerHTML=" (0)";
+
+        var inputs=document.getElementsByTagName("input");
+        for (let i in inputs){
+            if (inputs[i].type=="checkbox")
+                inputs[i].checked=true;
+            if (inputs[i].type=="radio" && inputs[i].value == "ambele")
+                inputs[i].checked=true;
+        }
+        
+        var options1=document.getElementsByTagName("option");
+        for(let i in options1){
+            options1[i].selected=true;
+        }
+
+        for(let i in options1){
+            if(options1[i].value=="toate")
+            options1[i].selected=true;
+        }
+
     }
 
 

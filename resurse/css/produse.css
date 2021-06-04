@@ -45,7 +45,7 @@ h3{
 figure{
     position: relative;
     left: 50px;
-    width: 300px;
+    /* width: 300px; */
     grid-area: poza;
 }
 
