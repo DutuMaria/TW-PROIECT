@@ -60,6 +60,7 @@ const client = new Client({
 })
 client.connect()
 
+
 app.set("view engine", "ejs");
 console.log("Proiectul se va afla la ", __dirname);
 
@@ -248,9 +249,6 @@ app.get("*/galerie-animata.css",function(req, res){
 
 });
 
-var zile = ["Dmunincă", "Luni", "Marți", "Miercuri", "Joi", "Vineri", "Sâmbătă"];
-var luni = ["Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Inunie", "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie"];
-
 
 
 
@@ -280,9 +278,13 @@ app.get("/produse",function(req, res){
 });
 
 
+var zile = ["Dmunincă", "Luni", "Marți", "Miercuri", "Joi", "Vineri", "Sâmbătă"];
+var luni = ["Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Inunie", "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie"];
+
+
 // pagina proprie produsului
 app.get("/produs/:id_produs",function(req, res){
-    console.log(req.params);
+    // console.log(req.params);
     
     const rezultat= client.query("select id, nume, pret, categorie, marime, gen, in_stoc, brand, descriere, rating_score, imagine from echipament where id="+req.params.id_produs, function(err,rez){
         // console.log(err, rez);
@@ -310,16 +312,14 @@ app.post("/inreg", function(req, res){
         let comanda = `insert into utilizatori (username, nume, prenume, parola, email, culoare_chat) values ('${campuriText.username}', '${campuriText.nume}', '${campuriText.prenume}', '${parolaCriptata }', '${campuriText.email}', '${campuriText.culoare_chat}')`;
         console.log(comanda);
         client.query(comanda, function(err, rez){
-             if (err){
-                 console.log(err);
-                 res.render("/pagini/inregistrare", {err: "Eroare baza de date! Reveniți mai târziu!", raspuns: "Datele NU au fost introduse."});
+            if (err){
+                console.log(err);
+                res.render("pagini/inregistrare", {err: "Eroare baza de date! Reveniți mai târziu!", raspuns: "Datele NU au fost introduse."});
             }
              else{
-                res.render("/pagini/inregistrare", {err: "", raspuns: "Datele au fost introduse."});
+                res.render("pagini/inregistrare", {err: "", raspuns: "Datele au fost introduse."});
                 trimiteMail(campuriText.username, campuriText.email);
            }
-            res.render("/pagini/inregistrare", {});
-          
         });
     });
 });

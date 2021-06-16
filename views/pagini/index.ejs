@@ -21,10 +21,19 @@
                 <p id= "citat"><q><i lang = "en">The five S’s of sports training are: stamina, speed, strength, skill, and spirit; but the greatest of these is spirit.</i></q>-Ken Doherty</p>
                 <section>
                     <h2>Bine ați venit!</h2>
-                    <button id = "schimbare-tema">Schimbă tema</button>
+                    <!-- <button id = "schimbare-tema">Schimbă tema</button> -->
+
+                    <div>
+                        <input type="checkbox" class = "checkbox" id="checkbox">
+                        <label for="checkbox" class ="label">
+                            <i class="fas fa-moon"></i> 
+                            <i class="fas fa-sun"></i>
+                            <div class="ball"></div> 
+                        </label>    
+                    </div>
 
                     <% if (!locals.utilizator) { %>
-                        <!-- unde se inchide p? -->
+                        
                         <p>Vă rugăm să vă logați: </p>
                             <form id = "login" method = "post" action = "/login">
 

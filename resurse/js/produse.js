@@ -56,11 +56,11 @@ window.onload =function(){
 
         var produse=document.getElementsByClassName("produs");
 
-        //numele are litere, cifre, spatii si "-"
-        // if(!nume.match("^[A-Za-z0-9∼- ]+$")){
-        //     alert("Numele a fost introdus greșit!");
-        // }
-        // else{
+        // numele are litere, cifre, spatii si "-"
+        if(nume && !nume.match("^[A-Za-z0-9- ]+$")){
+            alert("Numele a fost introdus greșit!");
+        }
+        else{
             for (let prod of produse){
                 prod.style.display="none";
             
@@ -100,7 +100,7 @@ window.onload =function(){
                         prod.style.display="block";
                 }
             }
-        // }
+        }
     }
 
 
@@ -148,10 +148,12 @@ window.onload =function(){
 
         var inputs=document.getElementsByTagName("input");
         for (let i in inputs){
-            if (inputs[i].type=="checkbox")
+            if (inputs[i].type=="checkbox" && inputs[i].id=="i_check")
                 inputs[i].checked=true;
             if (inputs[i].type=="radio" && inputs[i].value == "ambele")
                 inputs[i].checked=true;
+            if (inputs[i].type=="checkbox" && inputs[i].id=="cos_check")
+                inputs[i].checked=false;
         }
         
         var options1=document.getElementsByTagName("option");
@@ -166,24 +168,20 @@ window.onload =function(){
 
     }
 
-
-
-    window.onkeydown=function(e){
-        
-       
-        if (e.key=="c" && e.altKey){
-            e.preventDefault();
-            var produse=document.getElementsByClassName("produs");
-            sumaArt=0;
-            for (let prod of produse){
+    btn_cos=document.getElementById("sumaCos");
+    btn_cos.onclick=function(){
+        var produse=document.getElementsByClassName("produs");
+        sumaArt=0;
+        for (let prod of produse){
+            if(prod.getElementsByTagName("input")[0].checked)
                 sumaArt+=parseInt(prod.getElementsByClassName("val-pret")[0].innerHTML);
-            }
-            let infoSuma=document.createElement("p");//<p></p>
-            infoSuma.innerHTML="Suma: "+sumaArt;//<p>...</p>
-            infoSuma.className="info-produse";
-            let p=document.getElementById("p-suma")
-            p.parentNode.insertBefore(infoSuma,p.nextSibling);
-            setTimeout(function(){infoSuma.remove()}, 2000);
         }
+        let infoSuma=document.createElement("div");
+        infoSuma.innerHTML="Suma produselor selectate: "+sumaArt+"€";
+        infoSuma.className="info-produse";
+        let b=document.getElementById("sumaCos");
+        b.parentNode.insertBefore(infoSuma, b.nextSibling);
+        setTimeout(function(){infoSuma.remove()}, 2000);
     }
+
 }

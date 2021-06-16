@@ -1,6 +1,7 @@
 h2{
     text-align: center;
-    padding:0.4rem;
+    padding:0.4rem; 
+    /* rem= dimensiune font a radacinii -pagina HTML */
 }
 
 h3{
